@@ -1,16 +1,18 @@
 #include "texteditor.h"
 #include "ui_texteditor.h"
+#include "wheeleventfilter.h"
 
 #include <QFileDialog>
 #include <QDir>
 #include <QMessageBox>
 #include <QTextStream>
 
-TextEditor::TextEditor(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::TextEditor)
+TextEditor::TextEditor(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::TextEditor)
 {
     ui->setupUi(this);
+    ui->textEdit->installEventFilter(new WheelEventFilter(ui->textEdit));
 }
 
 TextEditor::~TextEditor()

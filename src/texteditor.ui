@@ -50,17 +50,17 @@ color: rgb(248, 248, 242);</string>
     <property name="title">
      <string>&amp;File</string>
     </property>
-    <addaction name="action_Save"/>
+    <addaction name="action_SaveAs"/>
    </widget>
    <addaction name="menu_File"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="action_Save">
+  <action name="action_SaveAs">
    <property name="text">
-    <string>&amp;Save</string>
+    <string>Save &amp;As...</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+S</string>
+    <string>Ctrl+Shift+S</string>
    </property>
   </action>
  </widget>

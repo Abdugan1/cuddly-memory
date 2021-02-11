@@ -11,11 +11,13 @@ CONFIG += c++11
 SOURCES += \
     src/abducode.cpp \
     src/main.cpp \
-    src/texteditor.cpp
+    src/texteditor.cpp \
+    src/wheeleventfilter.cpp
 
 HEADERS += \
     src/abducode.h \
-    src/texteditor.h
+    src/texteditor.h \
+    src/wheeleventfilter.h
 
 FORMS += \
     src/texteditor.ui

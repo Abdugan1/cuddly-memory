@@ -17,6 +17,8 @@ public:
 
 private slots:
 
+    void on_action_SaveAs_triggered();
+
 private:
     Ui::TextEditor *ui;
 };
