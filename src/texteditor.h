@@ -15,6 +15,8 @@ public:
     explicit TextEditor(QWidget *parent = nullptr);
     ~TextEditor();
 
+private slots:
+
 private:
     Ui::TextEditor *ui;
 };
