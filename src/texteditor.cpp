@@ -1,6 +1,7 @@
 #include "texteditor.h"
 #include "ui_texteditor.h"
 #include "wheeleventfilter.h"
+#include "syntaxhighlighter.h"
 
 #include <QFileDialog>
 #include <QDir>
@@ -12,7 +13,10 @@ TextEditor::TextEditor(QWidget *parent)
     , ui(new Ui::TextEditor)
 {
     ui->setupUi(this);
+    ui->textEdit->zoomIn(8);
     ui->textEdit->installEventFilter(new WheelEventFilter(ui->textEdit));
+
+    syntaxHighlighter_ = new SyntaxHighlighter(ui->textEdit->document());
 }
 
 TextEditor::~TextEditor()

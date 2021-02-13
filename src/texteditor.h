@@ -7,6 +7,8 @@ namespace Ui {
 class TextEditor;
 }
 
+class SyntaxHighlighter;
+
 class TextEditor : public QMainWindow
 {
     Q_OBJECT
@@ -21,6 +23,7 @@ private slots:
 
 private:
     Ui::TextEditor *ui;
+    SyntaxHighlighter* syntaxHighlighter_;
 };
 
 #endif // TEXTEDITOR_H
